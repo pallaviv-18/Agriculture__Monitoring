@@ -1,189 +1,129 @@
-AGRICULTURE MONITOTING 
-
-
-
 
 
 ---
 
-# 🌿 **Agriculture Resource Management System**
+# 🌿 farm-resource-crud-management
 
-## **Abstract**
-
-The *Agriculture Resource Management System* is a console-based application developed in **C programming language**.
-It helps manage farm resources such as seeds, fertilizers, and water efficiently using **CRUD operations**.
-
-The system uses a **singly linked list** for dynamic data storage and memory management. Unlike file-based systems, this program stores data temporarily during execution and clears memory upon exit. It is ideal for understanding **data structures and pointer-based operations** in C.
+📘 **Farm Resource Management System (CRUD using Linked List / Graph Concept)**
 
 ---
 
-## **Features**
+## 👥 Team Members
 
-* ➕ **Add Resource** – Insert new farm resources with ID, name, quantity, and unit
-* 📋 **View Resources** – Display all stored resources
-* ✏️ **Update Resource** – Modify existing resource details using ID
-* ❌ **Delete Resource** – Remove a resource from the list
-* 🧠 **Dynamic Memory Management** – Uses `malloc()` and `free()`
-* 🔁 **Menu-Driven Interface** – Easy navigation for users
+* V.PALLAVI
+* R.JAYANTHI
 
 ---
 
-## **Technical Requirements**
+## 🎯 Problem Statement
 
-### **1. System Requirements**
+In agriculture, managing resources like seeds, fertilizers, water, and tools is essential for productivity.
 
-* Any system capable of running a C program
-* Terminal / Command Prompt access
-* Minimal RAM (lightweight program)
+This project implements a **Farm Resource Management System** using C to efficiently perform **CRUD operations** on resources.
 
 ---
 
-### **2. Software Requirements**
+## 🌍 Real-Time Application
 
-* GCC / Clang / Turbo C compiler
-* Code editor (VS Code, CodeBlocks, Dev-C++, etc.)
-* Command-line interface
+This system simulates how farmers or agricultural managers track and manage farm resources.
 
----
+### Example:
 
-### **3. Programming Requirements**
-
-* Knowledge of:
-
-  * Structures (`struct`)
-  * Pointers and linked lists
-  * Functions
-  * Loops and conditional statements
-  * Standard I/O (`printf`, `scanf`)
+Farm Resources
+├── Fertilizer (50 kg)
+├── Seeds (30 kg)
+├── Water (100 litre)
+├── Pesticides (20 litre)
 
 ---
 
-### **4. Memory Management Requirements**
+## 🏗 Data Structure Used
 
-* Dynamic allocation using `malloc()`
-* Proper deallocation using `free()`
-* Avoid memory leaks using cleanup function
+**Linked List (Dynamic Data Structure)**
 
----
+Implemented using:
 
-### **5. Compilation Requirements**
-
-* C compiler installed and configured
-
-```
-gcc agriculture.c -o agriculture
-```
+* `struct`
+* Pointer-based node linking (`next`)
+* Dynamic memory allocation
 
 ---
 
-## ⚙️ **Fundamental Requirements**
+## 🔁 Features (CRUD Operations)
 
-### **1. User Interface**
-
-* Display a clear menu with all operations
-* Accept user input via keyboard
-* Show formatted output and messages
-* Repeat menu until user exits
-
----
-
-### **2. Resource Operations**
-
-* Add new resources with details
-* View all resources in list format
-* Update resource using unique ID
-* Delete resource by ID
+| Operation      | Description                       |
+| -------------- | --------------------------------- |
+| Create         | Add new resource                  |
+| Read           | Display all resources             |
+| Update         | Modify resource details           |
+| Delete         | Remove resource                   |
+| Memory Cleanup | Free allocated memory before exit |
 
 ---
 
-### **3. Data Management**
+## ⚙️ Algorithm Explanation
 
-* Store data dynamically using linked list
-* Maintain proper node connections
-* Ensure no memory leaks
-* Clear all data before program exit
+### ➤ Add Resource
+
+* Create new node using `malloc`
+* Insert at beginning of linked list
+
+### ➤ Display Resources
+
+* Traverse list from head to NULL
+* Print details of each node
+
+### ➤ Update Resource
+
+* Search by ID
+* Modify name, quantity, and unit
+
+### ➤ Delete Resource
+
+* Search node by ID
+* Adjust pointers and free memory
+
+### ➤ Free Memory
+
+* Traverse entire list
+* Free all nodes before exiting
 
 ---
 
-### **4. Program Flow**
+## 💻 Technologies Used
 
-* Display menu → accept user choice
-* Call respective functions:
-
-  * `addResource()`
-  * `displayResources()`
-  * `updateResource()`
-  * `deleteResource()`
-* Handle invalid inputs
-* Exit safely using `freeAll()`
+* C Programming Language
+* GCC Compiler
+* Dynamic Memory Allocation (`malloc`, `free`)
 
 ---
 
-## **Project File Structure**
+## ▶️ Compilation & Execution
 
-```
-Agriculture-Resource-System/
-│
-├── agriculture.c      # Main source code
-└── README.md          # Project documentation
+```bash
+gcc main.c -o farm
+
+./farm
 ```
 
 ---
 
-## **How to Compile and Run**
-
-### **Step 1: Open Terminal**
-
-Navigate to the project folder.
-
----
-
-### **Step 2: Compile**
-
-```
-gcc agriculture.c -o agriculture
-```
-
----
-
-### **Step 3: Run**
-
-```
-./agriculture
-```
-
----
-
-### **On Windows**
-
-```
-agriculture.exe
-```
-
----
-
-## **Sample Output**
-
-### **MAIN MENU**
+## 📊 Sample Output
 
 ```
 🌿 Agriculture Monitoring System
+
 1. Add Resource
 2. Display Resources
 3. Update Resource
 4. Delete Resource
 5. Exit
-Enter choice:
-```
 
----
+Enter choice: 1
 
-### **1. ADD RESOURCE**
-
-```
-Enter Resource ID: 101
-Enter Resource Name: Seeds
-Enter Quantity: 25
+Enter Resource ID: 1
+Enter Resource Name: Fertilizer
+Enter Quantity: 50
 Enter Unit: kg
 
 ✅ Resource added successfully!
@@ -191,38 +131,52 @@ Enter Unit: kg
 
 ---
 
-### **2. VIEW RESOURCES**
+## 📂 Project Structure
 
 ```
---- Farm Resources ---
-ID: 101
-Name: Seeds
-Quantity: 25.00 kg
-----------------------
+farm-resource-crud-management/
+
+│
+├── src/
+│   └── main.c
+│
+├── docs/
+│   └── project_report.pdf
+│
+├── ppt/
+│   └── presentation.pptx
+│
+├── sample_output.txt
+│
+└── README.md
 ```
+
+--
+
+## 📈 Results
+
+* Successfully implemented linked list-based resource system
+* Performed all CRUD operations efficiently
+* Demonstrated dynamic memory allocation
 
 ---
 
-### **3. UPDATE RESOURCE**
+## ✅ Conclusion
 
-```
-Enter Resource ID to update: 101
-Enter new name: Fertilizer
-Enter new quantity: 30
-Enter new unit: kg
-
-✅ Resource updated successfully!
-```
+This project shows how **linked lists** can be used in real-world agricultural systems to manage dynamic data efficiently.
 
 ---
 
-### **4. DELETE RESOURCE**
+## 🔮 Future Enhancements
 
-```
-Enter Resource ID to delete: 101
-
-✅ Resource deleted successfully!
-```
+* Add search functionality 🔍
+* Store data using files 💾
+* Convert into GUI application 🖥️
+* Add categorization (Tree/Graph-based system) 🌳
 
 ---
 
+## 📚 References
+
+* Data Structures in C – Books & Notes
+* Online tutorials and documentatioN
