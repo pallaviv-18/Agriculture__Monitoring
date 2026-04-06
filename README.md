@@ -10,8 +10,8 @@
 
 ## 👥 Team Members
 
-* V.PALLAVI
-* R.JAYANTHI
+* v.pallavi
+* R.jayanthi
 
 ---
 
