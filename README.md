@@ -2,7 +2,7 @@ AGRICULTURE MONITOTING
 
 
 
-Got it — you want a **clean, professional README exactly like that format**, but for your **Agriculture Monitoring System (linked list version)**. Here it is 👇
+
 
 ---
 
